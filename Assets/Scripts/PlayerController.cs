@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		countText.text = "残り： " + count.ToString () + "個";
 
-		if (count >= 9) {
+		if (count == 0) {
             mainCanvas.SetActive(false);
             gameFinishCanvas.SetActive(true);
             mobileSingleStickControl.SetActive(false);
