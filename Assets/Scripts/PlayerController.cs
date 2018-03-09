@@ -81,10 +81,12 @@ public class PlayerController : MonoBehaviour {
     // 衝突した瞬間に呼ばれる  
     void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.name == "FloorInteriorA4" || collision.gameObject.name == "FloorInteriorB1" || collision.gameObject.name == "FloorInteriorA6") {
             jump = false;
             animator.SetBool("Wait", true);
             animator.SetBool("Jump", false);
-        
+        }
+    
     }
 
     void OnTriggerEnter(Collider other) 
